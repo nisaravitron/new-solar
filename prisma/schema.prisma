@@ -1,0 +1,133 @@
+// Ek Badhyasi — multi-tenant SaaS schema
+// Dev uses SQLite (zero-config, no enum support), so Role/Status fields are
+// plain strings validated in application code (see src/lib/constants.ts).
+// For production, switch `provider` to "postgresql" (or "mysql"), point
+// DATABASE_URL at a real database, and you may promote these back to native
+// Prisma enums if you like.
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+// ---------------------------------------------------------------------------
+// Platform-level roles (see src/lib/constants.ts -> ROLES):
+// SUPER_ADMIN        -> runs the whole Ek Badhyasi platform, approves institutes
+// INSTITUTE_ADMIN     -> owns/manages one institute (tenant) after approval
+// TEACHER / STAFF     -> employees of one institute
+// STUDENT             -> enrolled in one institute
+// PARENT              -> linked to one or more students
+//
+// UserStatus (USER_STATUSES): PENDING | ACTIVE | SUSPENDED
+// InstituteType (INSTITUTE_TYPES): COACHING_CENTER | TRAINING_CENTER |
+//   SCHOOL | COLLEGE | UNIVERSITY | OTHER
+// InstituteStatus (INSTITUTE_STATUSES): PENDING | APPROVED | REJECTED | SUSPENDED
+// ---------------------------------------------------------------------------
+
+model User {
+  id           String @id @default(cuid())
+  name         String
+  email        String @unique
+  phone        String?
+  passwordHash String
+  role         String
+  status       String @default("PENDING")
+
+  instituteId String?
+  institute   Institute? @relation("InstituteUsers", fields: [instituteId], references: [id])
+
+  studentProfile StudentProfile?
+  parentProfile  ParentProfile?
+  noticesPosted  Notice[]         @relation("NoticeAuthor")
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([instituteId])
+}
+
+model Institute {
+  id       String @id @default(cuid())
+  name     String
+  slug     String @unique
+  type     String
+  status   String @default("PENDING")
+  isActive Boolean @default(false) // institute admin publishes their site once approved
+
+  contactEmail String
+  contactPhone String
+  address      String?
+  city         String?
+  description  String?
+  logoUrl      String?
+
+  rejectionReason String?
+  approvedAt      DateTime?
+  suspendedAt     DateTime?
+
+  users    User[]           @relation("InstituteUsers")
+  students StudentProfile[]
+  notices  Notice[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model StudentProfile {
+  id          String    @id @default(cuid())
+  userId      String    @unique
+  user        User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  instituteId String
+  institute   Institute @relation(fields: [instituteId], references: [id], onDelete: Cascade)
+
+  rollNumber String?
+  className  String?
+
+  parents ParentStudent[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([instituteId])
+}
+
+model ParentProfile {
+  id     String @id @default(cuid())
+  userId String @unique
+  user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  children ParentStudent[]
+
+  createdAt DateTime @default(now())
+}
+
+model ParentStudent {
+  id        String         @id @default(cuid())
+  parentId  String
+  parent    ParentProfile  @relation(fields: [parentId], references: [id], onDelete: Cascade)
+  studentId String
+  student   StudentProfile @relation(fields: [studentId], references: [id], onDelete: Cascade)
+
+  createdAt DateTime @default(now())
+
+  @@unique([parentId, studentId])
+}
+
+model Notice {
+  id          String    @id @default(cuid())
+  instituteId String
+  institute   Institute @relation(fields: [instituteId], references: [id], onDelete: Cascade)
+  authorId    String
+  author      User      @relation("NoticeAuthor", fields: [authorId], references: [id])
+
+  title   String
+  content String
+
+  createdAt DateTime @default(now())
+
+  @@index([instituteId])
+}
