@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Social Media Marketing Proposal – Plaza Sky Travel</title>
+<style>
+:root{--navy:#0b1f3a;--blue:#1560d4;--sky:#e8f1fd;--gold:#f2a900;--green:#16a34a;--text:#1f2937;--muted:#6b7280;--line:#e5e7eb;--bg:#f6f8fb}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Segoe UI',system-ui,-apple-system,Arial,sans-serif;color:var(--text);background:var(--bg);line-height:1.6}
+.wrap{max-width:1100px;margin:0 auto;padding:0 20px}
+section{padding:56px 0}
+h2{font-size:30px;color:var(--navy);margin-bottom:8px}
+h2+p.sub{color:var(--muted);margin-bottom:30px;max-width:720px}
+.tag{display:inline-block;background:var(--sky);color:var(--blue);font-weight:600;font-size:12px;letter-spacing:1px;text-transform:uppercase;padding:4px 12px;border-radius:99px;margin-bottom:12px}
+/* cover */
+.cover{background:linear-gradient(135deg,var(--navy),#123a74 60%,var(--blue));color:#fff;padding:90px 0 80px}
+.cover h1{font-size:46px;line-height:1.15;margin:14px 0 16px}
+.cover h1 span{color:var(--gold)}
+.cover p{max-width:640px;opacity:.9;font-size:18px}
+.meta{display:flex;flex-wrap:wrap;gap:30px;margin-top:40px;font-size:14px}
+.meta b{display:block;font-size:12px;opacity:.7;text-transform:uppercase;letter-spacing:1px;font-weight:600}
+/* cards */
+.grid{display:grid;gap:20px}
+.g2{grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+.g3{grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.g4{grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:24px}
+.card h3{color:var(--navy);margin-bottom:8px;font-size:18px}
+.card .ic{font-size:28px;margin-bottom:8px}
+.card p,.card li{font-size:15px;color:#374151}
+ul{list-style:none}
+ul.chk li{padding-left:24px;position:relative;margin:7px 0;font-size:14.5px}
+ul.chk li:before{content:"✓";position:absolute;left:0;color:var(--green);font-weight:700}
+ul.no li:before{content:"–";color:#b6bcc6}
+ul.no li{color:#9aa1ad}
+/* funnel */
+.funnel{display:flex;flex-wrap:wrap;gap:0;margin-top:10px}
+.funnel div{flex:1 1 200px;background:#fff;border:1px solid var(--line);padding:20px;position:relative}
+.funnel div:nth-child(1){border-top:4px solid #60a5fa}
+.funnel div:nth-child(2){border-top:4px solid var(--blue)}
+.funnel div:nth-child(3){border-top:4px solid var(--gold)}
+.funnel div:nth-child(4){border-top:4px solid var(--green)}
+.funnel h4{color:var(--navy);margin-bottom:6px}
+.funnel p{font-size:14px;color:#4b5563}
+/* pricing */
+.price-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(245px,1fr));gap:18px;align-items:stretch}
+.plan{background:#fff;border:1px solid var(--line);border-radius:16px;padding:26px 22px;display:flex;flex-direction:column;position:relative}
+.plan.pop{border:2px solid var(--blue);box-shadow:0 12px 30px rgba(21,96,212,.15)}
+.badge{position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:var(--gold);color:#3a2800;font-size:12px;font-weight:700;padding:4px 14px;border-radius:99px;white-space:nowrap}
+.plan h3{font-size:20px;color:var(--navy)}
+.plan .for{font-size:13px;color:var(--muted);min-height:38px;margin:4px 0 12px}
+.amt{font-size:34px;font-weight:800;color:var(--blue);line-height:1}
+.amt small{font-size:14px;color:var(--muted);font-weight:500}
+.old{font-size:14px;color:#9aa1ad;text-decoration:line-through}
+.off{display:inline-block;background:#dcfce7;color:#166534;font-size:12px;font-weight:700;padding:2px 9px;border-radius:99px;margin-left:6px;text-decoration:none}
+.qar{font-size:14px;color:var(--navy);font-weight:600;margin-top:6px}
+.flow{display:flex;flex-wrap:wrap;gap:14px;align-items:stretch;margin:6px 0 24px}
+.flow div{flex:1 1 220px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px 18px;font-size:14.5px}
+.flow b{display:block;color:var(--navy);margin-bottom:4px}
+.ads{margin:12px 0 14px;background:var(--sky);border-radius:8px;padding:8px 10px;font-size:13px;color:#1e3a8a}
+.plan ul{flex:1}
+.note{font-size:13px;color:var(--muted);margin-top:16px}
+/* table */
+.tbl{overflow-x:auto;background:#fff;border:1px solid var(--line);border-radius:14px}
+table{border-collapse:collapse;width:100%;min-width:760px;font-size:14px}
+th,td{padding:11px 14px;text-align:center;border-bottom:1px solid var(--line)}
+th:first-child,td:first-child{text-align:left;font-weight:600;color:var(--navy)}
+thead th{background:var(--navy);color:#fff;font-size:14px}
+thead th.hl{background:var(--blue)}
+tr.grp td{background:var(--sky);color:var(--blue);font-weight:700;text-align:left;font-size:12px;letter-spacing:1px;text-transform:uppercase}
+.y{color:var(--green);font-weight:700}.n{color:#c0c5cd}
+/* timeline */
+.steps{counter-reset:s}
+.step{background:#fff;border:1px solid var(--line);border-left:5px solid var(--blue);border-radius:10px;padding:16px 20px;margin-bottom:14px}
+.step h4{color:var(--navy)}
+.step p{font-size:14.5px;color:#4b5563}
+/* kpi */
+.kpi{text-align:center}
+.kpi .n2{font-size:30px;font-weight:800;color:var(--blue)}
+.kpi p{font-size:14px;color:var(--muted)}
+/* cta */
+.cta{background:var(--navy);color:#fff;text-align:center;padding:64px 0}
+.cta h2{color:#fff}
+.cta p{opacity:.85;max-width:600px;margin:10px auto 22px}
+.btn{display:inline-block;background:var(--gold);color:#3a2800;font-weight:700;padding:13px 30px;border-radius:10px;text-decoration:none}
+footer{background:#07152a;color:#9fb0c8;text-align:center;font-size:13px;padding:20px}
+.terms li{font-size:14.5px;margin:8px 0;padding-left:20px;position:relative}
+.terms li:before{content:"•";position:absolute;left:4px;color:var(--blue)}
+@media(max-width:640px){.cover h1{font-size:32px}h2{font-size:25px}section{padding:40px 0}}
+@media print{body{background:#fff}section{padding:28px 0;break-inside:avoid}.plan,.card,.step{break-inside:avoid}.cover,.cta,thead th,.btn{-webkit-print-color-adjust:exact;print-color-adjust:exact}}
+</style>
+</head>
+<body>
+
+<!-- COVER -->
+<header class="cover">
+<div class="wrap">
+  <span class="tag" style="background:rgba(255,255,255,.15);color:#fff">Business Proposal</span>
+  <h1>Social Media Marketing<br>Proposal for <span>Plaza Sky Travel</span></h1>
+  <p>A performance-driven social media &amp; paid advertising plan to generate more enquiries, bookings and sales – in English and Arabic.</p>
+  <div class="meta">
+    <div><b>Prepared for</b>Plaza Sky Travel, Qatar</div>
+    <div><b>Prepared by</b>Mohd Nisar</div>
+    <div><b>Date</b><span id="d"></span></div>
+    <div><b>Valid for</b>15 days</div>
+  </div>
+</div>
+</header>
+
+<!-- UNDERSTANDING -->
+<section>
+<div class="wrap">
+  <span class="tag">Overview</span>
+  <h2>Our Understanding &amp; Goal</h2>
+  <p class="sub">Plaza Sky Travel serves customers in Qatar through a bilingual (English &amp; Arabic) website. The next step is turning that website into a steady sales engine through social media and paid ads.</p>
+  <div class="grid g3">
+    <div class="card"><div class="ic">🎯</div><h3>Primary Goal</h3><p>Increase enquiries, WhatsApp leads and confirmed bookings (flights, hotel packages, holiday tours, visas, Umrah/Hajj &amp; corporate travel).</p></div>
+    <div class="card"><div class="ic">🌍</div><h3>Target Audience</h3><p>Qatari nationals, expatriate communities (Indian, Pakistani, Filipino, Nepali, Egyptian etc.), families, corporate clients and seasonal travellers.</p></div>
+    <div class="card"><div class="ic">🗣️</div><h3>Bilingual Reach</h3><p>Content, captions and ads in both English and Arabic so that we speak to every customer in their own language.</p></div>
+  </div>
+</div>
+</section>
+
+<!-- STRATEGY -->
+<section style="background:#fff">
+<div class="wrap">
+  <span class="tag">Strategy</span>
+  <h2>Our Sales-Focused Funnel</h2>
+  <p class="sub">Every post and every rupee of ad spend is mapped to a stage of the customer journey, so that activity turns into bookings, not just likes.</p>
+  <div class="funnel">
+    <div><h4>1. Awareness</h4><p>Destination reels, travel tips, festival &amp; season campaigns, Arabic + English creatives to reach new people.</p></div>
+    <div><h4>2. Interest</h4><p>Package carousels, customer stories, "why book with us" videos, visa &amp; travel guides.</p></div>
+    <div><h4>3. Enquiry</h4><p>Lead-generation &amp; Click-to-WhatsApp ads, Google Search ads on high-intent keywords, limited-time offers.</p></div>
+    <div><h4>4. Booking &amp; Repeat</h4><p>Retargeting, follow-up messaging, reviews, referral offers and festive reminders.</p></div>
+  </div>
+</div>
+</section>
+
+<!-- PACKAGES -->
+<section>
+<div class="wrap">
+  <span class="tag">Monthly Packages</span>
+  <h2>Choose the Plan That Fits Your Growth</h2>
+  <p class="sub">All prices are in Indian Rupees (₹) per month, excluding ad budget (paid directly by the client to Meta / Google). Choose Basic to start, or go Advanced for faster sales growth.</p>
+
+  <div class="price-grid">
+    <div class="plan">
+      <h3>BASIC</h3><div class="for">Build a professional, consistent presence</div>
+      <div class="old">₹18,000<span class="off">30.5% OFF</span></div><div class="amt">₹12,500<small> /month</small></div><div class="qar">≈ QAR 481 / month</div>
+      <div class="ads">📢 Ads: Setup &amp; boost guidance · budget paid by client</div>
+      <ul class="chk">
+        <li>3 platforms: Facebook, Instagram, TikTok</li>
+        <li>12 posts / month (designs &amp; carousels)</li>
+        <li>4 Reels / month</li>
+        <li>Stories – 8 / month</li>
+        <li>Bilingual captions (EN / AR)</li>
+        <li>Hashtag &amp; posting-time research</li>
+        <li>Content calendar &amp; scheduling</li>
+        <li>Monthly performance report</li>
+      </ul>
+    </div>
+
+    <div class="plan">
+      <h3>GROWTH</h3><div class="for">Start generating leads with paid ads</div>
+      <div class="old">₹35,000<span class="off">30.5% OFF</span></div><div class="amt">₹24,300<small> /month</small></div><div class="qar">≈ QAR 935 / month</div>
+      <div class="ads">📢 Ads: Meta Ads management · budget paid by client</div>
+      <ul class="chk">
+        <li>4 platforms: Facebook, Instagram, TikTok, LinkedIn</li>
+        <li>16 posts + 8 Reels / month</li>
+        <li>Stories – 15 / month</li>
+        <li>Meta lead &amp; Click-to-WhatsApp campaigns</li>
+        <li>2 active ad campaigns, A/B testing</li>
+        <li>Pixel &amp; conversion tracking setup</li>
+        <li>Community / DM guidance &amp; reply templates</li>
+        <li>Bi-weekly report + monthly strategy call</li>
+      </ul>
+    </div>
+
+    <div class="plan pop">
+      <div class="badge">⭐ MOST POPULAR</div>
+      <h3>PRO</h3><div class="for">Full-funnel sales system – Meta + Google</div>
+      <div class="old">₹65,000<span class="off">30.5% OFF</span></div><div class="amt">₹45,100<small> /month</small></div><div class="qar">≈ QAR 1,735 / month</div>
+      <div class="ads">📢 Ads: Meta + Google management · budget paid by client</div>
+      <ul class="chk">
+        <li>5 platforms: Facebook, Instagram, TikTok, LinkedIn, YouTube</li>
+        <li>20 posts + 12 Reels / month</li>
+        <li>Stories – daily (30 / month)</li>
+        <li>Google Search Ads (flights, packages, visa keywords)</li>
+        <li>Meta full-funnel + retargeting campaigns</li>
+        <li>Google Business Profile optimisation</li>
+        <li>Seasonal offer campaigns (Eid, summer, Umrah, holidays)</li>
+        <li>Influencer / UGC coordination (1 / month)</li>
+        <li>Weekly report + dashboard</li>
+      </ul>
+    </div>
+  </div>
+  <p class="note">* Fees shown are our management fee after a 30.5% introductory discount (Basic ₹18,000 → ₹12,500, same discount applied to all plans). QAR values are indicative at about 1 QAR = ₹26 (QAR is pegged to USD; the final amount depends on the day's exchange rate).<br>* Ad budget is NOT included – see "Ad Budget" below. Prices exclude shoot costs (unless stated), stock licences, influencer fees and applicable taxes.</p>
+</div>
+</section>
+
+
+<!-- AD BUDGET -->
+<section style="background:#fff">
+<div class="wrap">
+  <span class="tag">Ad Budget</span>
+  <h2>Ad Budget – Fully Transparent &amp; In Your Control</h2>
+  <p class="sub">Your advertising money goes directly to Google and Meta from your own ad accounts. We never take a commission on ad spend, and you decide how much to invest.</p>
+  <div class="flow">
+    <div><b>1. You set the budget</b>Start small and scale up as leads and bookings grow. Daily budget can be changed or paused any time.</div>
+    <div><b>2. You pay Google / Meta directly</b>Billing is in your own card/account. You own the accounts, data and audiences.</div>
+    <div><b>3. We manage &amp; optimise</b>Campaign setup, targeting, creatives, tracking and daily optimisation – included in the monthly fee.</div>
+    <div><b>4. You see every riyal</b>Spend, leads, cost per lead and ROAS reported clearly, so you know exactly what ad money delivered.</div>
+  </div>
+  <div class="tbl">
+  <table>
+    <thead><tr><th>Plan</th><th>Ad platforms managed</th><th>Suggested monthly ad budget (client decides)</th></tr></thead>
+    <tbody>
+      <tr><td>Basic</td><td>Post boosting guidance</td><td>QAR 300 – 750 (optional)</td></tr>
+      <tr><td>Growth</td><td>Meta (Facebook, Instagram)</td><td>QAR 1,000 – 2,500</td></tr>
+      <tr><td>Pro</td><td>Meta + Google Search &amp; Display</td><td>QAR 2,500 – 6,000</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p class="note">Suggested ranges are only a guide. Higher ad budgets generally bring more leads and faster learning, but our management fee stays the same.</p>
+</div>
+</section>
+
+<!-- MARKET -->
+<section>
+<div class="wrap">
+  <span class="tag">Market Comparison</span>
+  <h2>How This Offer Compares With the Qatar Market</h2>
+  <p class="sub">Based on publicly listed social media packages from agencies in Doha and the Gulf (2026). Figures are indicative and scope differs from agency to agency.</p>
+  <div class="tbl">
+  <table>
+    <thead><tr><th>Option</th><th>Typical monthly price</th><th>What it usually includes</th></tr></thead>
+    <tbody>
+      <tr><td>Local Doha agency – entry plan</td><td>QAR 1,100 – 1,200</td><td>~10 posts, 1 reel, ~5 stories; ads usually not included</td></tr>
+      <tr><td>Gulf (UAE-based) agency – starter retainer</td><td>QAR 2,975</td><td>Content and management; ad spend billed separately</td></tr>
+      <tr><td>Full-service agency (strategy + ads)</td><td>Quote-based, typically thousands of QAR</td><td>Content, ads, reporting, account manager</td></tr>
+      <tr><td><b>Our Basic</b></td><td><b>≈ QAR 481</b></td><td>12 posts, 4 reels, 8 stories, bilingual captions, reporting</td></tr>
+      <tr><td><b>Our Growth</b></td><td><b>≈ QAR 935</b></td><td>16 posts, 8 reels, Meta ads management, 3 platforms</td></tr>
+      <tr><td><b>Our Pro</b></td><td><b>≈ QAR 1,735</b></td><td>Meta + Google ads, 4 platforms, 12 reels, weekly reporting</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p class="note">Result: you get more content, bilingual (English + Arabic) delivery and professional ad management at a lower monthly cost than comparable local plans, with the same work done by an experienced remote team.</p>
+</div>
+</section>
+
+<!-- COMPARISON -->
+<section>
+<div class="wrap">
+  <span class="tag">Compare</span>
+  <h2>Detailed Package Comparison</h2>
+  <p class="sub">A side-by-side view of exactly what is delivered every month.</p>
+  <div class="tbl">
+  <table>
+    <thead><tr><th>Deliverable</th><th>Basic</th><th>Growth</th><th class="hl">Pro</th></tr></thead>
+    <tbody>
+      <tr class="grp"><td colspan="4">Content</td></tr>
+      <tr><td>Static posts / carousels</td><td>12</td><td>16</td><td>20</td></tr>
+      <tr><td>Reels / short videos</td><td>4</td><td>8</td><td>12</td></tr>
+      <tr><td>Stories</td><td>8</td><td>15</td><td>30</td></tr>
+      <tr><td>Professional video shoot</td><td class="n">–</td><td class="n">–</td><td>Optional</td></tr>
+      <tr><td>English + Arabic captions</td><td class="y">✓</td><td class="y">✓</td><td class="y">✓</td></tr>
+      <tr><td>Platforms managed</td><td>FB, IG, TikTok</td><td>FB, IG, TikTok, LinkedIn</td><td>FB, IG, TikTok, LinkedIn, YouTube</td></tr>
+      <tr class="grp"><td colspan="4">Paid Advertising</td></tr>
+      <tr><td>Meta Ads (Facebook + Instagram)</td><td>Setup &amp; boost guidance</td><td class="y">✓</td><td class="y">✓</td></tr>
+      <tr><td>Click-to-WhatsApp / Lead Form ads</td><td class="n">–</td><td class="y">✓</td><td class="y">✓</td></tr>
+      <tr><td>Google Search Ads</td><td class="n">–</td><td class="n">–</td><td class="y">✓</td></tr>
+      <tr><td>Google Display / YouTube / Performance Max</td><td class="n">–</td><td class="n">–</td><td>Display + YouTube</td></tr>
+      <tr><td>Retargeting campaigns</td><td class="n">–</td><td class="n">–</td><td class="y">✓</td></tr>
+      <tr><td>Pixel / conversion tracking</td><td class="n">–</td><td class="y">✓</td><td class="y">✓</td></tr>
+      <tr class="grp"><td colspan="4">Growth &amp; Support</td></tr>
+      <tr><td>Google Business Profile optimisation</td><td class="n">–</td><td class="n">–</td><td class="y">✓</td></tr>
+      <tr><td>Influencer / UGC coordination</td><td class="n">–</td><td class="n">–</td><td>1 / month</td></tr>
+      <tr><td>Seasonal &amp; festival offer campaigns</td><td class="n">–</td><td>Basic</td><td class="y">✓</td></tr>
+      <tr><td>Competitor analysis</td><td class="n">–</td><td class="n">–</td><td>Quarterly</td></tr>
+      <tr><td>Reporting</td><td>Monthly</td><td>Bi-weekly</td><td>Weekly</td></tr>
+      <tr><td>Strategy call</td><td class="n">–</td><td>Monthly</td><td>Bi-weekly</td></tr>
+      <tr><td><b>Monthly fee (after 30.5% off)</b></td><td><b>₹12,500</b><br><small>≈ QAR 481</small></td><td><b>₹24,300</b><br><small>≈ QAR 935</small></td><td><b>₹45,100</b><br><small>≈ QAR 1,735</small></td></tr>
+    </tbody>
+  </table>
+  </div>
+</div>
+</section>
+
+<!-- CONTENT PILLARS -->
+<section>
+<div class="wrap">
+  <span class="tag">Content Plan</span>
+  <h2>What We Will Post</h2>
+  <p class="sub">A balanced content mix that builds trust and pushes people to enquire.</p>
+  <div class="grid g4">
+    <div class="card"><div class="ic">💰</div><h3>Offers &amp; Deals</h3><p>Flight fares, hotel packages, limited-time discounts, early-bird offers (35%)</p></div>
+    <div class="card"><div class="ic">🏝️</div><h3>Destinations</h3><p>Reels and carousels on popular destinations, itineraries and holiday ideas (25%)</p></div>
+    <div class="card"><div class="ic">⭐</div><h3>Trust &amp; Proof</h3><p>Customer reviews, booking stories, team intro, behind-the-scenes (20%)</p></div>
+    <div class="card"><div class="ic">📘</div><h3>Travel Help</h3><p>Visa guides, travel tips, baggage rules, FAQs, Umrah guidance (20%)</p></div>
+  </div>
+</div>
+</section>
+
+<!-- ADS -->
+<section style="background:#fff">
+<div class="wrap">
+  <span class="tag">Advertising</span>
+  <h2>Ad Channels We Will Run</h2>
+  <div class="grid g3" style="margin-top:24px">
+    <div class="card"><div class="ic">📘</div><h3>Meta Ads</h3><p>Facebook &amp; Instagram campaigns for leads, WhatsApp messages and website traffic, with audience targeting by country, language, interest and travel behaviour.</p></div>
+    <div class="card"><div class="ic">🔎</div><h3>Google Ads</h3><p>Search ads on high-intent keywords like "cheap flights Doha", "holiday packages from Qatar", "visa services Qatar", in English and Arabic, plus Display and YouTube.</p></div>
+    <div class="card"><div class="ic">🔁</div><h3>Retargeting</h3><p>Bring back website visitors and social engagers with offer reminders until they book. Highest ROI stage of the funnel.</p></div>
+  </div>
+</div>
+</section>
+
+<!-- ONBOARDING -->
+<section>
+<div class="wrap">
+  <span class="tag">Roadmap</span>
+  <h2>First 90 Days Plan</h2>
+  <p class="sub">&nbsp;</p>
+  <div class="step"><h4>Week 1 – Audit &amp; Setup</h4><p>Account access, profile optimisation, brand kit, competitor research, tracking (Pixel / GA4 / Google Ads), content calendar and first-month strategy.</p></div>
+  <div class="step"><h4>Weeks 2–4 – Launch</h4><p>Regular posting begins, first ad campaigns go live, A/B testing of creatives, offers and audiences, WhatsApp lead handling process set.</p></div>
+  <div class="step"><h4>Month 2 – Optimise</h4><p>Pause low performers, scale winning ads, launch retargeting, add seasonal offers and customer-review content.</p></div>
+  <div class="step"><h4>Month 3 – Scale</h4><p>Increase budget on best campaigns, lookalike audiences, referral campaign and next-quarter growth roadmap.</p></div>
+</div>
+</section>
+
+<!-- KPIs -->
+<section style="background:#fff">
+<div class="wrap">
+  <span class="tag">Results</span>
+  <h2>What We Measure</h2>
+  <p class="sub">Transparent reports focused on business outcomes. Targets are set together after the first month of data; results depend on budget, offers and sales follow-up.</p>
+  <div class="grid g4">
+    <div class="card kpi"><div class="n2">Leads</div><p>Enquiries &amp; WhatsApp chats</p></div>
+    <div class="card kpi"><div class="n2">CPL</div><p>Cost per lead</p></div>
+    <div class="card kpi"><div class="n2">ROAS</div><p>Revenue per ad spend</p></div>
+    <div class="card kpi"><div class="n2">Reach</div><p>Followers, engagement, traffic</p></div>
+  </div>
+</div>
+</section>
+
+<!-- TERMS -->
+<section>
+<div class="wrap">
+  <span class="tag">Terms</span>
+  <h2>Terms &amp; Conditions</h2>
+  <ul class="terms" style="margin-top:18px">
+    <li>Billing is monthly in advance in INR (bank transfer / UPI / international remittance). Initial commitment: 3 months recommended; thereafter month-to-month with 30 days' notice.</li>
+    <li>Ad budgets are decided by the client and paid directly to Meta and Google from the client's own ad accounts; we charge no commission on ad spend and the client retains full ownership of all accounts. Fees quoted in INR; QAR figures are indicative.</li>
+    <li>Client to provide logo, brand assets, offers, price lists, photos/videos and timely approvals. Posts are scheduled after approval.</li>
+    <li>Up to 2 revisions per creative are included. Extra shoots, influencer fees, stock media and third-party tools are charged at actuals.</li>
+    <li>Final conversions depend on pricing, offers, response time and sales follow-up by the client's team. Results are not guaranteed, but we commit to full effort and transparent reporting.</li>
+    <li>Prices exclude applicable taxes and are valid for 15 days from the proposal date.</li>
+  </ul>
+</div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+<div class="wrap">
+  <h2>Let's Grow Plaza Sky Travel Together</h2>
+  <p>Select a package and we can start within 3–5 working days. A free 30-minute strategy call is available to finalise the plan.</p>
+  <a class="btn" href="https://wa.me/918188877720?text=Hello%20Nisar%2C%20I%20approve%20the%20Plaza%20Sky%20Travel%20proposal.">Approve &amp; Get Started</a>
+  <p style="margin-top:26px;font-size:15px"><b>Mohd Nisar</b><br>Digital Marketing Consultant<br>📧 <a href="mailto:seonisar@gmail.com" style="color:#fff">seonisar@gmail.com</a><br>📞 Call / WhatsApp: <a href="tel:+918188877720" style="color:#fff">+91 81888 77720</a></p>
+</div>
+</section>
+<footer>© <span id="y"></span> Mohd Nisar · Confidential proposal prepared exclusively for Plaza Sky Travel</footer>
+
+<script>
+var n=new Date();
+document.getElementById('d').textContent=n.toLocaleDateString('en-GB',{day:'numeric',month:'long',year:'numeric'});
+document.getElementById('y').textContent=n.getFullYear();
+</script>
+</body>
+</html>
